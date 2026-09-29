@@ -1,0 +1,10 @@
+这个目录只放最终交付物，一次成功运行后只会有两个文件：
+
+    reconciliation.xlsx   对账结果工作簿（summary / matched / differences / only_left / only_right）
+    report.txt            文本处理报告
+
+它们同属一次成功运行：先在 work/staging/ 里完整生成并通过校验，再一起提交到这里。
+提交中任何一步失败都会回滚，所以这里**不会**出现半套结果。
+
+判断「上次跑成功了吗」就看这个目录：有 reconciliation.xlsx 就是成功，没有就是不成功。
+（用 --force 重跑时，上一次的这两个文件会先归档到 work/previous/ 保留，不会就地覆盖。）

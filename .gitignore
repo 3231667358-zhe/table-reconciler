@@ -1,0 +1,34 @@
+# ---------- Python ----------
+__pycache__/
+*.pyc
+*.pyo
+
+# ---------- 虚拟环境 ----------
+.venv/
+venv/
+
+# ---------- 运行时产物 ----------
+# work/ 是中间产物区，output/ 是最终交付区，都是跑出来的，不进仓库。
+# 目录本身用 .gitkeep 占位保留。
+work/*
+!work/.gitkeep
+output/*
+!output/.gitkeep
+input/*
+!input/.gitkeep
+
+# ---------- Excel / 编辑器临时文件 ----------
+~$*.xlsx
+~$*.xlsm
+*.bak
+*.swp
+*.swo
+*~
+
+# ---------- IDE ----------
+.idea/
+.vscode/
+
+# ---------- 系统 ----------
+.DS_Store
+Thumbs.db
